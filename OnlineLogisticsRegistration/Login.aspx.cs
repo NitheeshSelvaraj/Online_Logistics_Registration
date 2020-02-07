@@ -9,13 +9,13 @@ namespace OnlineLogisticsRegistration
         //{
           //  Console.WriteLine("Registered successfully");
         //}
-        protected void Click_Register(object sender, EventArgs e)
+        protected void BtnClick_Register(object sender, EventArgs e)
         {
             Response.Redirect("Registration.aspx");
         }
-        protected void Click_Login(object sender, EventArgs e)
+        protected void BtnClick_Login(object sender, EventArgs e)
         {
-            string role = new UserRepository().LogIn(userName.Text, password.Text);
+            string role = new UserRepository().LogIn(txtUserName.Text, txtPassword.Text);
             if (role == "ADMIN" || role == "USER")
             {
                 Response.Write("Role: " + role);

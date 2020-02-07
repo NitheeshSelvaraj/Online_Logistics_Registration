@@ -21,7 +21,7 @@
             </tr>
              <tr>
                 <td>Mobile Number </td>
-                <td><asp:TextBox ID="txtMobileNumber" runat="server" BorderColor="Gray" TextMode="Number" CssClass="Roundedcorner"></asp:TextBox>
+                <td><asp:TextBox ID="txtMobileNumber" runat="server" BorderColor="Gray" TextMode="Number" MaxLength="10" CssClass="Roundedcorner"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvRequiredMobileNumber" runat="server" ErrorMessage="Mobile Number Required" ControlToValidate="txtMobileNumber"></asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="revCheckMobileNumber" runat="server" ErrorMessage="Enter the valid Mobile Number" ControlToValidate="txtMobileNumber" ValidationExpression="^[6-9][0-9]{9}$"></asp:RegularExpressionValidator>                
                 </td>
@@ -44,11 +44,11 @@
                 <td>Confirm Password </td>
                 <td><asp:TextBox ID="txtConfirmPassword" runat="server" BorderColor="Gray" TextMode="password" MaxLength="20" CssClass="Roundedcorner"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvRequiredConfirmation" runat="server" ErrorMessage="Should be filled" ControlToValidate="txtConfirmPassword"></asp:RequiredFieldValidator>
-                    <asp:CompareValidator ID="cvComparePassword" runat="server" ErrorMessage="Should be same as Password" ControlToCompare="password" ControlToValidate="txtConfirmPassword"></asp:CompareValidator>
+                    <asp:CompareValidator ID="cvComparePassword" runat="server" ErrorMessage="Should be same as Password" ControlToCompare="txtPassword" ControlToValidate="txtConfirmPassword"></asp:CompareValidator>
                 </td>
             </tr>
             <tr>  
-               <td colspan="2" style="text-align:center"><asp:Button text="Register" id="btnRegister" runat="server" onclick="Click_Register"/></td>
+               <td colspan="2" style="text-align:center"><asp:Button text="Register" id="btnRegister" runat="server" onclick="BtnClick_Register"/></td>
             </tr>
         </table>
         

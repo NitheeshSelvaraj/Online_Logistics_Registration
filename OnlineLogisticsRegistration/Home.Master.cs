@@ -9,9 +9,17 @@ namespace OnlineLogisticsRegistration
 {
     public partial class Home : System.Web.UI.MasterPage
     {
-        protected void Login_Click(object sender, EventArgs e)
+        protected void BtnLogin_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
+        }
+        protected void BtnRegistration_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Registration.aspx");
+        }
+        protected void BtnHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
         }
     }
 }

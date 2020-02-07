@@ -7,9 +7,9 @@ namespace OnlineLogisticsRegistration
 {
     public partial class Registration : System.Web.UI.Page
     {
-        protected void Click_Register(object sender, EventArgs e)
+        protected void BtnClick_Register(object sender, EventArgs e)
         {
-            User user = new User(name.Text, mobileNumber.Text, userName.Text, password.Text);
+            User user = new User(txtName.Text, txtMobileNumber.Text, txtUserName.Text, txtPassword.Text);
             int result= new UserRepository().SignUp(user);
             if (result == 1)
             {
