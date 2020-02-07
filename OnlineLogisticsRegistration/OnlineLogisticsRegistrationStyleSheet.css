@@ -1,0 +1,15 @@
+﻿.Roundedcorner{
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
+            border-bottom-left-radius:5px;
+            border-bottom-right-radius:5px;
+        }
+.Heading{
+    background-color:aqua;
+}
+.Center{
+    text-align:center;
+}
+.TableColor{
+    background-color:aliceblue;
+}

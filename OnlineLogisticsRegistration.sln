@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineLogisticsRegistration", "OnlineLogisticsRegistration\OnlineLogisticsRegistration.csproj", "{D7C83E84-D81F-4E78-B5DD-7D5C9DCD2AEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineLogisticsRegistration.Common", "OnlineLogisticsRegistration.Common\OnlineLogisticsRegistration.Common.csproj", "{7107C475-CD5F-42D8-A2CB-544A85FAAF91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineLogisticsRegistration.BL", "OnlineLogisticsRegistration.BL\OnlineLogisticsRegistration.BL.csproj", "{6FDE6C4B-9AEB-4796-BB48-E6090C87D7BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineLogisticsRegistration.DAL", "OnlineLogisticsRegistration.DAL\OnlineLogisticsRegistration.DAL.csproj", "{21244C53-D5C1-4B33-B81E-C592E200CAC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineLogisticsRegistration.PL", "OnlineLogisticsRegistration.PL\OnlineLogisticsRegistration.PL.csproj", "{40036880-49C4-4DE9-9D63-BB3BAAC09B52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineLogisticsRegistration.Entity", "OnlineLogisticsRegistration.Entity\OnlineLogisticsRegistration.Entity.csproj", "{175CC0DF-5E2E-4BEB-8F2D-B4FB8751E508}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7C83E84-D81F-4E78-B5DD-7D5C9DCD2AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7C83E84-D81F-4E78-B5DD-7D5C9DCD2AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7C83E84-D81F-4E78-B5DD-7D5C9DCD2AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7C83E84-D81F-4E78-B5DD-7D5C9DCD2AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7107C475-CD5F-42D8-A2CB-544A85FAAF91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7107C475-CD5F-42D8-A2CB-544A85FAAF91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7107C475-CD5F-42D8-A2CB-544A85FAAF91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7107C475-CD5F-42D8-A2CB-544A85FAAF91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FDE6C4B-9AEB-4796-BB48-E6090C87D7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FDE6C4B-9AEB-4796-BB48-E6090C87D7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FDE6C4B-9AEB-4796-BB48-E6090C87D7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FDE6C4B-9AEB-4796-BB48-E6090C87D7BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21244C53-D5C1-4B33-B81E-C592E200CAC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21244C53-D5C1-4B33-B81E-C592E200CAC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21244C53-D5C1-4B33-B81E-C592E200CAC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21244C53-D5C1-4B33-B81E-C592E200CAC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40036880-49C4-4DE9-9D63-BB3BAAC09B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40036880-49C4-4DE9-9D63-BB3BAAC09B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40036880-49C4-4DE9-9D63-BB3BAAC09B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40036880-49C4-4DE9-9D63-BB3BAAC09B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{175CC0DF-5E2E-4BEB-8F2D-B4FB8751E508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{175CC0DF-5E2E-4BEB-8F2D-B4FB8751E508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{175CC0DF-5E2E-4BEB-8F2D-B4FB8751E508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{175CC0DF-5E2E-4BEB-8F2D-B4FB8751E508}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
