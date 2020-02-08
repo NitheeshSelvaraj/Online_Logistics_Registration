@@ -18,8 +18,15 @@ namespace OnlineLogisticsRegistration
             string role = new UserRepository().LogIn(txtUserName.Text, txtPassword.Text);
             if (role == "ADMIN" || role == "USER")
             {
-                Response.Write("Role: " + role);
-                Response.Write("Logged In Successfully!!!");
+                if(role=="ADMIN")
+                {
+                    Response.Redirect("VehicleDetails.aspx");
+                }
+                else
+                {
+                    Response.Write("Role: " + role);
+                    Response.Write("Logged In Successfully!!!");
+                }
             }
             else if(role=="NoUser")
                 Response.Write("UserName or Password Incorrect");

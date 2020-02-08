@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace OnlineLogisticsRegistration.DAL
 {
-    class DataBaseConnection
+    public class DataBaseConnection
     {
         public static SqlConnection GetDBConnection()
         {
