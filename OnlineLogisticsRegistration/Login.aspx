@@ -29,9 +29,9 @@
     <div align="center">
         <table>
            <tr>  
-               <td><asp:Button text="Register" id="btnRegister" runat="server" onclick="BtnClick_Register"/></td>
-               <td></td>
                <td><asp:Button text="Login" id="btnLogin" runat="server" onclick="BtnClick_Login"/></td>
+               <td></td>
+               <td><asp:Button text="Register" id="btnRegister" runat="server" onclick="BtnClick_Register"/></td>           
             </tr>
         </table>
    </div>

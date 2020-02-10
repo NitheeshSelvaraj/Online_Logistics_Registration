@@ -30,17 +30,24 @@ namespace OnlineLogisticsRegistration.DAL
             SqlConnection sqlConnection = DataBaseConnection.GetDBConnection();
             using (SqlCommand sqlCommand = new SqlCommand("VEHICLE_Update", sqlConnection))
             {
-                sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@VehicleID", vehicle.vehicleID);
-                sqlCommand.Parameters.AddWithValue("@VehicleNumber", vehicle.vehicleNumber);
-                sqlCommand.Parameters.AddWithValue("@VehicleType", vehicle.vehicleType);
-                sqlCommand.Parameters.AddWithValue("@StartLocation", vehicle.startLocation);
-                sqlCommand.Parameters.AddWithValue("@DestinationLocation", vehicle.destinationLocation);
-                sqlCommand.Parameters.AddWithValue("@VehicleLoadWeight", vehicle.vehicleLoadWeight);
-                sqlConnection.Open();
-                int rows = sqlCommand.ExecuteNonQuery();
-                sqlConnection.Close();
-                return rows;
+                try
+                {
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                    sqlCommand.Parameters.AddWithValue("@VehicleID", vehicle.vehicleID);
+                    sqlCommand.Parameters.AddWithValue("@VehicleNumber", vehicle.vehicleNumber);
+                    sqlCommand.Parameters.AddWithValue("@VehicleType", vehicle.vehicleType);
+                    sqlCommand.Parameters.AddWithValue("@StartLocation", vehicle.startLocation);
+                    sqlCommand.Parameters.AddWithValue("@DestinationLocation", vehicle.destinationLocation);
+                    sqlCommand.Parameters.AddWithValue("@VehicleLoadWeight", vehicle.vehicleLoadWeight);
+                    sqlConnection.Open();
+                    int rows = sqlCommand.ExecuteNonQuery();
+                    sqlConnection.Close();
+                    return rows;
+                }
+                catch (Exception)
+                {
+                    return -1;
+                }
             }
         }
         public int Add(Vehicle vehicle)
@@ -48,17 +55,24 @@ namespace OnlineLogisticsRegistration.DAL
             SqlConnection sqlConnection = DataBaseConnection.GetDBConnection();
             using (SqlCommand sqlCommand = new SqlCommand("VEHICLE_Insert", sqlConnection))
             {
-                sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@VehicleID", vehicle.vehicleID);
-                sqlCommand.Parameters.AddWithValue("@VehicleNumber", vehicle.vehicleNumber);
-                sqlCommand.Parameters.AddWithValue("@VehicleType", vehicle.vehicleType);
-                sqlCommand.Parameters.AddWithValue("@StartLocation", vehicle.startLocation);
-                sqlCommand.Parameters.AddWithValue("@DestinationLocation", vehicle.destinationLocation);
-                sqlCommand.Parameters.AddWithValue("@VehicleLoadWeight", vehicle.vehicleLoadWeight);
-                sqlConnection.Open();
-                int rows = sqlCommand.ExecuteNonQuery();
-                sqlConnection.Close();
-                return rows;
+                try
+                {
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                    sqlCommand.Parameters.AddWithValue("@VehicleID", vehicle.vehicleID);
+                    sqlCommand.Parameters.AddWithValue("@VehicleNumber", vehicle.vehicleNumber);
+                    sqlCommand.Parameters.AddWithValue("@VehicleType", vehicle.vehicleType);
+                    sqlCommand.Parameters.AddWithValue("@StartLocation", vehicle.startLocation);
+                    sqlCommand.Parameters.AddWithValue("@DestinationLocation", vehicle.destinationLocation);
+                    sqlCommand.Parameters.AddWithValue("@VehicleLoadWeight", vehicle.vehicleLoadWeight);
+                    sqlConnection.Open();
+                    int rows = sqlCommand.ExecuteNonQuery();
+                    sqlConnection.Close();
+                    return rows;
+                }
+                catch (Exception)
+                {
+                    return -1;
+                }
             }
         }
         public int Delete(int vehicleID)

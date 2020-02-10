@@ -31,7 +31,7 @@
                        <asp:TextBox ID="vehicleIdtxt" Text='<%# Bind("VehicleID") %>' runat="server" MaxLength="5"></asp:TextBox>
                    </EditItemTemplate>--%>
                    <FooterTemplate>
-                       <asp:TextBox ID="vehicleIDAddtxt" runat="server" MaxLength="5"></asp:TextBox> 
+                       <asp:TextBox ID="vehicleIDAddtxt" TextMode="Number" runat="server" MaxLength="5"></asp:TextBox> 
                    </FooterTemplate>
                    
                </asp:TemplateField>
@@ -41,9 +41,11 @@
                    </ItemTemplate>
                    <EditItemTemplate>
                        <asp:TextBox ID="vehicleNumbertxt" Text='<%# Eval("VehicleNumber") %>' runat="server" MaxLength="15"></asp:TextBox>
+                       <asp:RegularExpressionValidator ID="revCheckVehicleNumber" runat="server" ErrorMessage="Vehicle Number should be eg.(TN35DS8764)" ControlToValidate="vehicleNumbertxt" ValidationExpression="^[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}"></asp:RegularExpressionValidator>
                    </EditItemTemplate>
                    <FooterTemplate>
                        <asp:TextBox ID="vehicleNumberAddtxt" runat="server" MaxLength="15"></asp:TextBox>
+                       <asp:RegularExpressionValidator ID="revCheckVehicleNumber" runat="server" ErrorMessage="Vehicle Number should be eg.(TN35DS8764)" ControlToValidate="vehicleNumberAddtxt" ValidationExpression="^[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}"></asp:RegularExpressionValidator>
                    </FooterTemplate>
                </asp:TemplateField>
                <asp:TemplateField HeaderText="Vehicle Type">
@@ -84,10 +86,10 @@
                        <asp:Label ID="vehicleLoadWeightLabel" Text='<%# Bind("VehicleLoadWeight") %>' style="text-align:center" runat="server"></asp:Label>
                    </ItemTemplate>
                    <EditItemTemplate>
-                       <asp:TextBox ID="vehicleLoadWeighttxt" Text='<%# Bind("VehicleLoadWeight") %>' runat="server" MaxLength="3"></asp:TextBox>
+                       <asp:TextBox ID="vehicleLoadWeighttxt" TextMode="Number" Text='<%# Bind("VehicleLoadWeight") %>' runat="server" MaxLength="3"></asp:TextBox>
                    </EditItemTemplate>
                    <FooterTemplate>
-                       <asp:TextBox ID="vehicleLoadWeightAddTxt" runat="server" MaxLength="3"></asp:TextBox>
+                       <asp:TextBox ID="vehicleLoadWeightAddTxt" Textmode="Number" runat="server" MaxLength="3"></asp:TextBox>
                    </FooterTemplate>
                </asp:TemplateField>
                
