@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Data;
-using System.Data.SqlClient;
 using System.Web.UI.WebControls;
-using OnlineLogisticsRegistration.DAL;
 using OnlineLogisticsRegistration.BL;
+using OnlineLogisticsRegistration.Entity;
 
 namespace OnlineLogisticsRegistration
 {
@@ -42,7 +40,8 @@ namespace OnlineLogisticsRegistration
             string startLocation=((TextBox)vehicleDetailsGrid.Rows[e.RowIndex].FindControl("startLocationtxt")).Text;
             string destinationLocation=((TextBox)vehicleDetailsGrid.Rows[e.RowIndex].FindControl("destinationLocationtxt")).Text;
             int vehicleLoadWeight=Convert.ToInt32(((TextBox)vehicleDetailsGrid.Rows[e.RowIndex].FindControl("vehicleLoadWeighttxt")).Text);
-            int rows = new VehiclePathToDAL().Update(vehicleID, vehicleNumber, vehicleType, startLocation, destinationLocation, vehicleLoadWeight);
+            Vehicle vehicle = new Vehicle(vehicleID, vehicleNumber, vehicleType, startLocation, destinationLocation, vehicleLoadWeight);
+            int rows = new VehiclePathToDAL().Update(vehicle);
             if (rows >= 1)
             {
                 vehicleDetailsGrid.EditIndex = -1;
@@ -71,7 +70,8 @@ namespace OnlineLogisticsRegistration
             string startLocation = ((TextBox)vehicleDetailsGrid.FooterRow.FindControl("startLocationAddtxt")).Text;
             string destinationLocation = ((TextBox)vehicleDetailsGrid.FooterRow.FindControl("destinationLocationAddtxt")).Text;
             int vehicleLoadWeight = Convert.ToInt32(((TextBox)vehicleDetailsGrid.FooterRow.FindControl("vehicleLoadWeightAddtxt")).Text);
-            int rows = new VehiclePathToDAL().Add(vehicleID, vehicleNumber, vehicleType, startLocation, destinationLocation, vehicleLoadWeight);
+            Vehicle vehicle=new Vehicle(vehicleID, vehicleNumber, vehicleType, startLocation, destinationLocation, vehicleLoadWeight);
+            int rows = new VehiclePathToDAL().Add(vehicle);
             if (rows >= 1)
             {
                  vehicleDetailsGrid.EditIndex = -1;

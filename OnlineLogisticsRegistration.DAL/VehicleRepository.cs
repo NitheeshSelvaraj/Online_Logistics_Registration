@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using OnlineLogisticsRegistration.Entity;
 
 namespace OnlineLogisticsRegistration.DAL
 {
@@ -24,36 +25,36 @@ namespace OnlineLogisticsRegistration.DAL
                 
             }
         }
-        public int Update(int vehicleID, string vehicleNumber, string vehicleType, string startLocation, string destinationLocation, int vehicleLoadWeight)
+        public int Update(Vehicle vehicle)
         {
             SqlConnection sqlConnection = DataBaseConnection.GetDBConnection();
             using (SqlCommand sqlCommand = new SqlCommand("VEHICLE_Update", sqlConnection))
             {
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@VehicleID", vehicleID);
-                sqlCommand.Parameters.AddWithValue("@VehicleNumber", vehicleNumber);
-                sqlCommand.Parameters.AddWithValue("@VehicleType", vehicleType);
-                sqlCommand.Parameters.AddWithValue("@StartLocation", startLocation);
-                sqlCommand.Parameters.AddWithValue("@DestinationLocation", destinationLocation);
-                sqlCommand.Parameters.AddWithValue("@VehicleLoadWeight", vehicleLoadWeight);
+                sqlCommand.Parameters.AddWithValue("@VehicleID", vehicle.vehicleID);
+                sqlCommand.Parameters.AddWithValue("@VehicleNumber", vehicle.vehicleNumber);
+                sqlCommand.Parameters.AddWithValue("@VehicleType", vehicle.vehicleType);
+                sqlCommand.Parameters.AddWithValue("@StartLocation", vehicle.startLocation);
+                sqlCommand.Parameters.AddWithValue("@DestinationLocation", vehicle.destinationLocation);
+                sqlCommand.Parameters.AddWithValue("@VehicleLoadWeight", vehicle.vehicleLoadWeight);
                 sqlConnection.Open();
                 int rows = sqlCommand.ExecuteNonQuery();
                 sqlConnection.Close();
                 return rows;
             }
         }
-        public int Add(int vehicleID, string vehicleNumber, string vehicleType, string startLocation, string destinationLocation, int vehicleLoadWeight)
+        public int Add(Vehicle vehicle)
         {
             SqlConnection sqlConnection = DataBaseConnection.GetDBConnection();
             using (SqlCommand sqlCommand = new SqlCommand("VEHICLE_Insert", sqlConnection))
             {
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@VehicleID", vehicleID);
-                sqlCommand.Parameters.AddWithValue("@VehicleNumber", vehicleNumber);
-                sqlCommand.Parameters.AddWithValue("@VehicleType", vehicleType);
-                sqlCommand.Parameters.AddWithValue("@StartLocation", startLocation);
-                sqlCommand.Parameters.AddWithValue("@DestinationLocation", destinationLocation);
-                sqlCommand.Parameters.AddWithValue("@VehicleLoadWeight", vehicleLoadWeight);
+                sqlCommand.Parameters.AddWithValue("@VehicleID", vehicle.vehicleID);
+                sqlCommand.Parameters.AddWithValue("@VehicleNumber", vehicle.vehicleNumber);
+                sqlCommand.Parameters.AddWithValue("@VehicleType", vehicle.vehicleType);
+                sqlCommand.Parameters.AddWithValue("@StartLocation", vehicle.startLocation);
+                sqlCommand.Parameters.AddWithValue("@DestinationLocation", vehicle.destinationLocation);
+                sqlCommand.Parameters.AddWithValue("@VehicleLoadWeight", vehicle.vehicleLoadWeight);
                 sqlConnection.Open();
                 int rows = sqlCommand.ExecuteNonQuery();
                 sqlConnection.Close();

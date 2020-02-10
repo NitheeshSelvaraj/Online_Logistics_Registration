@@ -1,4 +1,5 @@
 ﻿using OnlineLogisticsRegistration.DAL;
+using OnlineLogisticsRegistration.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,13 +15,13 @@ namespace OnlineLogisticsRegistration.BL
         {
             return new VehicleRepository().BindData();
         }
-        public int Update(int vehicleID, string vehicleNumber, string vehicleType, string startLocation, string destinationLocation, int vehicleLoadWeight)
+        public int Update(Vehicle vehicle)
         {
-            return new VehicleRepository().Update(vehicleID, vehicleNumber, vehicleType, startLocation, destinationLocation, vehicleLoadWeight);
+            return new VehicleRepository().Update(vehicle);
         }
-        public int Add(int vehicleID, string vehicleNumber, string vehicleType, string startLocation, string destinationLocation, int vehicleLoadWeight)
+        public int Add(Vehicle vehicle)
         {
-            return new VehicleRepository().Add(vehicleID, vehicleNumber, vehicleType, startLocation, destinationLocation, vehicleLoadWeight);
+            return new VehicleRepository().Add(vehicle);
         }
         public int Delete(int vehicleID)
         {
