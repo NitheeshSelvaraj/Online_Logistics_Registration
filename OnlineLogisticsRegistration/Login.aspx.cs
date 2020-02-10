@@ -1,5 +1,5 @@
 ﻿using System;
-using OnlineLogisticsRegistration.DAL;
+using OnlineLogisticsRegistration.BL;
 
 namespace OnlineLogisticsRegistration
 {
@@ -15,7 +15,7 @@ namespace OnlineLogisticsRegistration
         }
         protected void BtnClick_Login(object sender, EventArgs e)
         {
-            string role = new UserRepository().LogIn(txtUserName.Text, txtPassword.Text);
+            string role = new UserPathToDAL().LogIn(txtUserName.Text, txtPassword.Text);
             if (role == "ADMIN" || role == "USER")
             {
                 if(role=="ADMIN")

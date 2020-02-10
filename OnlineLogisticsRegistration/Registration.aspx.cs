@@ -1,6 +1,6 @@
 ﻿using System;
 using OnlineLogisticsRegistration.Entity;
-using OnlineLogisticsRegistration.DAL;
+using OnlineLogisticsRegistration.BL;
 
 
 namespace OnlineLogisticsRegistration
@@ -10,7 +10,7 @@ namespace OnlineLogisticsRegistration
         protected void BtnClick_Register(object sender, EventArgs e)
         {
             User user = new User(txtName.Text, txtMobileNumber.Text, txtUserName.Text, txtPassword.Text);
-            int result= new UserRepository().SignUp(user);
+            int result= new UserPathToDAL().SignUp(user);
             if (result == 1)
             {
                 // new Login().Display();

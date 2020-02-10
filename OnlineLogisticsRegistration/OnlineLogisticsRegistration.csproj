@@ -163,6 +163,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OnlineLogisticsRegistration.BL\OnlineLogisticsRegistration.BL.csproj">
+      <Project>{6fde6c4b-9aeb-4796-bb48-e6090c87d7ba}</Project>
+      <Name>OnlineLogisticsRegistration.BL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OnlineLogisticsRegistration.DAL\OnlineLogisticsRegistration.DAL.csproj">
       <Project>{21244c53-d5c1-4b33-b81e-c592e200cac0}</Project>
       <Name>OnlineLogisticsRegistration.DAL</Name>
